@@ -1,0 +1,6 @@
+Revision history for Perl extension XML::Filter::ExceptionLocator.
+
+0.01  Sun Sep 28 18:23:55 2003
+	- original version; created by h2xs 1.21 with options
+		-XA -n XML::Filter::ExceptionLocator
+
