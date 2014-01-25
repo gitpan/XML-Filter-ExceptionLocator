@@ -2,7 +2,7 @@ package XML::Filter::ExceptionLocator;
 use 5.006;
 use strict;
 use warnings;
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 use base 'XML::SAX::Base';
 
@@ -16,11 +16,11 @@ sub set_document_locator {
 
 # install handler for all SAX methods
 BEGIN {
-    for my $method qw(start_document     end_document           start_element
-                      end_element        processing_instruction comment
-                      skipped_entity     ignorable_whitespace   end_entity
-                      start_entity       entity_reference
-                      start_cdata        end_cdata) {
+    for my $method (qw(start_document     end_document           start_element
+                       end_element        processing_instruction comment
+                       skipped_entity     ignorable_whitespace   end_entity
+                       start_entity       entity_reference
+                      s tart_cdata        end_cdata)) {
         no strict 'refs';
         my $super_meth = "SUPER::$method";
         *{__PACKAGE__ . "::$method"} = 
